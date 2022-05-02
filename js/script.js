@@ -46,7 +46,7 @@ const imgDescription = (description) => {
   } else if (description === 'broken clouds' || description === 'few clouds') {
     return 'img/broken-clouds.svg.png';
   } else {
-    return 'img/Imagen1.png';
+    return 'img/imagen1.png';
   }
 };
 
