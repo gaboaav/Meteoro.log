@@ -43,7 +43,7 @@ body>div>button>p{
     text-shadow: 5px 5px 15px black;
 }
 .start{
-    animation: inicio 3s;
+    animation: inicio 4s;
 }
 .meteorologo{
     display: none;
