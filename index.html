@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Clima</title>
+  </head>
+  <body>
+    <header class="container-flex">
+      <img src="img/rayo.png" alt="logo_rayo" />
+      <h1>METEORO.LOG( )</h1>
+      <h2 class="time"></h2>
+    </header>
+    <div class="container-flex hide">
+      <button class="init">
+        <p>¿Lloverá?</p>
+      </button>
+    </div>
+    <main class="meteorologo">
+      <div class="container-flex">
+        <section class="actual"></section>
+      </div>
+      <section class="historico container-flex">
+        <button class="Izq"><img src="img/i.png" alt="Izquierda" /></button>
+        <ul class="container-flex"></ul>
+        <button class="Der"><img src="img/d.png" alt="Derecha" /></button>
+      </section>
+    </main>
+
+    <script src="js/Botones.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js//actualTemp.js"></script>
+    <script src="js/Fecha_Hora.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

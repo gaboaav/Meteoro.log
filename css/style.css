@@ -1,0 +1,183 @@
+*{
+    margin:0px;
+}
+header{
+    background-color: rgba(114, 11, 114, 0.767);
+}
+.container-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+}
+.container-flex>img{
+    width:70px;
+}
+.container-flex>h2, .container-flex>h1{
+    background-color: rgba(255, 255, 255, 0.671);
+    border-radius: 10px;
+    padding: 0px 10px;
+    text-align: center;
+}
+body>div.container-flex{
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+body>div>button{
+    width:220px;
+    height: 220px;
+    border-radius: 50%;
+    text-align: center;
+    background-image: url("../img/catatumbo.jpg");
+    border:5px double white;
+}
+body>div>button:hover{
+    width: 230px;
+    height: 230px;
+}
+body>div>button>p{
+    color:white;
+    font-size: 2em;
+    font-family:cursive;
+    text-shadow: 5px 5px 15px black;
+}
+.start{
+    animation: inicio 3s;
+}
+.meteorologo{
+    display: none;
+}
+body{
+    background-image: url("../img/catatumbo.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+main>div.container-flex{
+    justify-content: center;
+    border-bottom: 5px black double;
+}
+.actual{
+    text-align: center;
+    padding:50px 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.671);
+}
+.actual .time{
+    display: none;
+}
+.actual h1{
+    padding-bottom:15px;
+}
+.historico{
+    justify-content: center;
+}
+.historico>ul{
+    list-style-type: none;
+}
+.historico>ul>li{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width:200px;
+    height: 260px;
+    background-color: rgba(255, 255, 255, 0.671);
+    padding:10px 5px;
+    border-radius: 20px;
+    margin:5px;
+}
+.historico>ul>li>p{
+    padding-bottom: 10px;
+}
+.Izq, .Der{
+    background-color: rgba(255, 255, 255, 0.048);
+    border: transparent;
+    padding: 5px 0px;
+}
+.Izq>img, .Der>img{
+    width:50px
+}
+@media(min-width:1200px){
+    .historico>ul{
+        width:1100px;
+    }
+    .historico ul li{
+        display:none;
+    }
+}
+@media(max-width:1199px) and ( min-width:700px){
+    .historico ul li{
+        display:none;
+    }
+    .historico ul{
+        width:100%;
+    }
+}
+
+@media(max-width:750px){
+    .historico ul{
+        width: 100%;
+    }
+    .historico ul li{
+        display: none;
+        width: 120px;
+    }
+    .historico ul li img{
+        width: 120px;
+    }
+
+}
+@media(max-width:560px){
+    .actual{
+        width: 50%;
+    }
+    .actual img{
+        width: 150px;
+    }
+    .historico ul{
+        justify-content: space-around;
+    }
+    .historico ul li{
+        width: 80px;
+    }
+    .historico ul li img{
+        width: 80px;
+    }
+    .actual .time{
+        display:block;
+        padding-bottom: 10px;
+
+    }
+    header>h1{
+        font-size: 1.6em;
+    }
+    header.container-flex>img{
+        width: 50px;
+    }
+    header .time{
+        display:none;
+    }
+
+}
+@media(max-width:340px){
+    header.container-flex>img{
+        display:none;
+    }
+    header>h1{
+        font-size: 1.3em;
+    }
+}
+
+@keyframes inicio{
+    60%{
+        transform:scale(0.5);
+        opacity: 1;
+    }
+    100%{
+        transform:scale(2.5);
+        opacity: 0;
+
+    }
+}
