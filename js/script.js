@@ -12,18 +12,21 @@ const successCallback = async (position) => {
 
   tempXHora.createLi(timestampClimate);
   tempXHora.display();
-  setTimeout(function () {
-    let rain = llovera(timestampClimate);
-    if (Number.isInteger(rain)) {
-      window.alert(
-        `!Cuidado¡ Lloverá en las proximas 8 horas. ${hf(
-          timestampClimate[rain].hour
-        )}`
-      );
-    } else {
-      window.alert('No lloverá en las proximas 8 horas.');
-    }
-  }, 1000);
+  const button = document.querySelector('.init');
+  button.addEventListener('animationend', function (event) {
+    setTimeout(function () {
+      let rain = llovera(timestampClimate);
+      if (Number.isInteger(rain)) {
+        window.alert(
+          `!Cuidado¡ Lloverá en las proximas 8 horas. ${hf(
+            timestampClimate[rain].hour
+          )}`
+        );
+      } else {
+        window.alert('No lloverá en las proximas 8 horas.');
+      }
+    }, 1000);
+  });
 };
 const errorCallback = (error) => console.error(error);
 
@@ -67,10 +70,12 @@ const h = document.querySelector('.hide');
 button.addEventListener('click', function (event) {
   const page = document.querySelector('.meteorologo');
   button.classList.add('start');
-  button.addEventListener('animationend', function (event) {
+  button.addEventListener('animationstart', function (event) {
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
       timeout: 5000,
     });
+  });
+  button.addEventListener('animationend', function (event) {
     h.style.display = 'none';
     page.style.display = 'block';
     body.style.height = 'auto';
